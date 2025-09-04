@@ -1,0 +1,27 @@
+{
+  "name": "WebToEpub",
+  "version": "1.0.9.4",
+  "icons": {
+    "128": "book128.png"
+  },
+  "default_locale": "en",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "cookies",
+    "downloads",
+    "declarativeNetRequest",
+    "storage",
+    "unlimitedStorage",
+    "scripting"
+  ],
+  "manifest_version": 3,
+  "action": {
+    "default_title": "",
+    "default_icon": "book128.png",
+    "default_popup": "popup.html"
+  },
+  "incognito": "split",
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
