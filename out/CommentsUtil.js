@@ -83,6 +83,10 @@ class Comments {
     }
     for (const el of WebPlatform_NodeList_Reference_Class(dom.querySelectorAll('li')).as(HTMLElement)) {
       el.append(document.createElement('hr'));
+      const comment_text = el.querySelector('&>div>div.comment-body>div.comment-text[data-spoiler="1"]');
+      if (comment_text) {
+        comment_text.textContent = '[spoiler]';
+      }
     }
     for (const el of WebPlatform_NodeList_Reference_Class(dom.querySelectorAll('a')).as(HTMLElement)) {
       el.removeAttribute('href');
