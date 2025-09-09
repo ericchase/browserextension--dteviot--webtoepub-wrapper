@@ -9,7 +9,6 @@ import { Processor_Set_Writable } from './core/processor/Processor_Set_Writable.
 import { Processor_TypeScript_Generic_Transpiler } from './core/processor/Processor_TypeScript_Generic_Transpiler.js';
 import { Step_Bun_Run } from './core/step/Step_Bun_Run.js';
 import { Step_FS_Clean_Directory } from './core/step/Step_FS_Clean_Directory.js';
-import { Step_FS_Copy_Files } from './core/step/Step_FS_Copy_Files.js';
 import { Step_FS_Delete_Directory } from './core/step/Step_FS_Delete_Directory.js';
 import { Step_FS_Move_Files } from './core/step/Step_FS_Move_Files.js';
 import { Processor_Browser_Extension_Update_Manifest_Cache } from './lib-browser-extension/processors/Processor_Browser_Extension_Update_Manifest_Cache.js';
@@ -114,8 +113,8 @@ Builder.SetCleanUpSteps(
     showlogs: false,
   }),
   Step_FS_Delete_Directory(`${Builder.Dir.Out}/original-repo/plugin`),
-  Step_Browser_Extension_Bundle({ release_dir: 'release' }),
   Step_Dev_Format({ showlogs: false }),
+  Step_Browser_Extension_Bundle({ release_dir: 'release' }),
   //
 );
 
